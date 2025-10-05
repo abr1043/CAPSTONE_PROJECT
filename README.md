@@ -1,19 +1,23 @@
-# Capstone Project
+# 📰 CD Blog — Capstone Project
 
-This is my Capstone Project built with Django and Django REST Framework.
+CD Blog is a simple and scalable web application built with **Django** and **Django REST Framework (DRF)**.  
+It allows users to manage products and (optionally) blog posts through RESTful APIs — supporting CRUD operations, model relationships, and admin management.
+
+This project is developed as part of the Capstone Project to demonstrate full-stack backend development skills using Django.
+
+---
 
 ## 🚀 Features
-- Product management (CRUD API)
-- Django REST API endpoints
-- Database models and admin setup
 
-## 🛠️ Tech Stack
-- Python 3.13
-- Django 5+
-- Django REST Framework
-- SQLite3 (default)
+- 🔧 Django REST Framework–powered API
+- 🧩 Model-based database (Product)
+- 🗂️ CRUD operations (Create, Read, Update, Delete)
+- 🕹️ Django Admin panel for management
+- 🕒 Automatic timestamps for records
+- 🧱 Scalable structure for future extensions (e.g. posts, comments, users)
+- 💾 SQLite3 database (default, can be switched to PostgreSQL)
 
-## ⚙️ Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/capstone_project.git
+---
+
+## 🏗️ Project Structure
+
