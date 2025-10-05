@@ -21,3 +21,29 @@ This project is developed as part of the Capstone Project to demonstrate full-st
 
 ## 🏗️ Project Structure
 
+CAPSTONE_PROJECT/
+├── cd_blog/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   └── urls.py
+├── capstone_project/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+├── manage.py
+├── db.sqlite3
+├── requirements.txt
+└── README.md
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/YOUR_USERNAME/capstone_project.git
+cd capstone_project
