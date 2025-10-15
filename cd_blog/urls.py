@@ -1,9 +1,15 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import PostViewSet, CommentViewSet
+from .auth_views import RegisterView  # 👈 import the RegisterView
+from .profile_views import UserProfileView
+
+router = DefaultRouter()
+router.register(r'posts', PostViewSet)
+router.register(r'comments', CommentViewSet)
 
 urlpatterns = [
-    path('posts/', views.PostListCreateView.as_view(), name='post-list'),
-    path('posts/<int:pk>/', views.PostDetailView.as_view(), name='post-detail'),
-    path('comments/', views.CommentListCreateView.as_view(), name='comment-list'),
-    path('posts/<int:post_id>/like/', views.LikePostView.as_view(), name='like-post'),
+    path('', include(router.urls)),
+    path('register/', RegisterView.as_view(), name='register'),
+    path('profile/', UserProfileView.as_view(), name='profile'), 
 ]
