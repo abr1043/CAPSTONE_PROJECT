@@ -16,13 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from django.http import JsonResponse
+
+# 👇 Root view for homepage
+def home(request):
+    return JsonResponse({
+        "message": "Welcome to the Community Discussion Blog API!",
+        "status": "active",
+        "author": "Abraham Ojo",
+        "description": "An API for creating blog posts, comments, and discussions with JWT authentication."
+    })
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('cd_blog.urls')),
-
-    # JWT Authentication
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('', home, name='home'),  # 👈 homepage message
+    path('api/', include('cd_blog.urls')),  # 👈 routes from your cd_blog app
 ]
+

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-dyd86f$!hh#*jaxxqd)6p*5j847#yxk0k%sg9jftlc!+%odcxs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['socia-med.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
