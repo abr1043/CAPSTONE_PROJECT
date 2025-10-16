@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 # 👇 Root view for homepage
 def home(request):
@@ -29,7 +33,10 @@ def home(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),  # 👈 homepage message
-    path('api/', include('cd_blog.urls')),  # 👈 routes from your cd_blog app
-]
+    path('', home, name='home'),
+    path('api/', include('cd_blog.urls')),  # 👈 your app routes
 
+    # 👇 JWT Authentication endpoints
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+]
