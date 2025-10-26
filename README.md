@@ -68,7 +68,7 @@ cd CAPSTONE_PROJECT
 2️⃣ Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate      # For Windows
-# OR
+
 source venv/bin/activate   # For Mac/Linux
 
 3️⃣ Install dependencies
@@ -84,8 +84,7 @@ python manage.py createsuperuser
 6️⃣ Start the server
 python manage.py runserver
 
-
-Your API will be live at:
+MY API will be live at:
 👉 http://127.0.0.1:8000/
 
 🔑 API Endpoints
